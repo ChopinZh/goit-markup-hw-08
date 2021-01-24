@@ -227,3 +227,52 @@
 .modal-comment-field {
   margin-bottom: 0px;
 }
+
+@media screen and (min-width: 768 px) {
+  .backdrop {
+    padding-top: 208px;
+    padding-bottom: 207px;
+    padding-top: 93px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 767 px) {
+  .backdrop {
+    padding-top: 208px;
+    padding-bottom: 207px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backdrop {
+    padding-right: 159px;
+    padding-left: 159px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+.backdrop{
+  padding-top: 221px;
+  padding-bottom: 222px;
+
+.modal{
+  min-width: 528px;
+}
+.modal-title{
+  line-height: 1.172;
+}
+.modal-form-policy-text::before{
+  margin-right: 8.38px;
+}
+
+.policy label{
+  font-size: 14px;
+  line-height: 1.714px;
+}
+
+.conditions{
+  font-size: 14px;
+  line-height: 1.714px;
+}
+}
