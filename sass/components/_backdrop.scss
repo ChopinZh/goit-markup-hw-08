@@ -1,0 +1,215 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  transition: 250ms var(--timing-function);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--color-accent-2);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms var(--timing-function);
+  padding: 40px;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--color-accent-2);
+
+  &:hover {
+    fill: var(--color-accent);
+  }
+}
+
+.close-button-icon {
+  width: 12px;
+  height: 12px;
+  fill: var(--super-black-color);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Оставьте свои данные, мы вам перезвоним */
+.modal-title {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.modal-undertitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: var(--link-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 42px;
+  transition: border-color 250ms var(--timing-function);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms var(--timing-function);
+
+  .modal-form-input:focus + & {
+    fill: var(--color-accent);
+  }
+}
+
+.modal-form-message {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 12px 16px;
+  margin-top: 4px;
+  resize: none;
+  transition: border-color 250ms var(--timing-function);
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+}
+
+.conditions {
+  text-decoration-line: underline;
+  color: var(--color-accent);
+}
+
+.modal-form-policy-text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  color: var(--link-color);
+  margin-left: 7px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    margin-right: 9px;
+
+    .modal-form-policy:checked + & {
+      background-color: var(--color-accent);
+      background-image: url(../images/vector.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      border-color: var(--color-accent);
+    }
+  }
+}
+
+.modal-form-button {
+  width: 200px;
+  height: 50px;
+  background: var(--color-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  display: block;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  /* padding: 10px 32px; */
+  margin: auto;
+  color: var(--color-accent-2);
+  outline: none;
+}
+
+.checkbox-finito {
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+  margin-bottom: 30px;
+}
+
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-comment-field {
+  margin-bottom: 0px;
+}

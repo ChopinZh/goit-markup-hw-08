@@ -1,0 +1,59 @@
+.booking-section {
+  background-color: var(--main-background);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images-2/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: auto;
+  margin-left: auto;
+  &.button {
+    min-width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 32px;
+    margin: auto;
+    align-items: center;
+    font-family: var(--main-font);
+    color: var(--color-accent-2);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    background: #2196f3;
+  }
+}
+
+.booking-section-part {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-title {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-2);
+  margin-bottom: 30px;
+  width: 696px;
+}
