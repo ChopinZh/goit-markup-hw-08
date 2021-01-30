@@ -7,19 +7,10 @@
   background-color: rgba(0, 0, 0, 0.1);
 
   transition: 250ms var(--timing-function);
-  overflow: scroll;
-  transition-property: opacity, visibility;
-  transition-duration: 400ms;
 }
 
 .modal {
   position: absolute;
-  transform: scale(1);
-  min-width: 450px;
-  min-height: 581px;
-  margin-right: auto;
-  margin-left: auto;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -29,10 +20,7 @@
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition-property: transform;
-  transition-delay: 150ms;
   transition: transform 250ms var(--timing-function);
-
   padding: 40px;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
@@ -52,8 +40,6 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--color-accent-2);
-  transition-property: color;
-  transition: 250ms var(--timing-function);
 
   &:hover {
     fill: var(--color-accent);
@@ -226,53 +212,4 @@
 
 .modal-comment-field {
   margin-bottom: 0px;
-}
-
-@media screen and (min-width: 768 px) {
-  .backdrop {
-    padding-top: 208px;
-    padding-bottom: 207px;
-    padding-top: 93px;
-    padding-bottom: 94px;
-  }
-}
-
-@media screen and (min-width: 767 px) {
-  .backdrop {
-    padding-top: 208px;
-    padding-bottom: 207px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .backdrop {
-    padding-right: 159px;
-    padding-left: 159px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-.backdrop{
-  padding-top: 221px;
-  padding-bottom: 222px;
-
-.modal{
-  min-width: 528px;
-}
-.modal-title{
-  line-height: 1.172;
-}
-.modal-form-policy-text::before{
-  margin-right: 8.38px;
-}
-
-.policy label{
-  font-size: 14px;
-  line-height: 1.714px;
-}
-
-.conditions{
-  font-size: 14px;
-  line-height: 1.714px;
-}
 }
